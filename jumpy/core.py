@@ -19,7 +19,8 @@ __all__ = [
 try:
     import jax
     import jax.numpy as jnp
-    from jax import custom_jvp, tree_map
+    from jax import custom_jvp
+    from jax.tree_util import tree_map
     from jax.interpreters.batching import BatchTracer
 except ImportError:
     jax, jnp = None, None
